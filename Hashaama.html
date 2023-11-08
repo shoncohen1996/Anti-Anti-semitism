@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2299.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;title&gt;Email Link Generator&lt;/title&gt;</p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">function generateMailtoLink() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var email = document.getElementById('email').value;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var subject = document.getElementById('subject').value;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var body = document.getElementById('body').value;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>var mailtoLink = document.getElementById('mailtoLink');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>mailtoLink.href = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(subject)}&amp;body=${encodeURIComponent(body)}`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>mailtoLink.innerHTML = 'Click here to send your email!';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>mailtoLink.style.display = 'block';</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h2&gt;Email Link Generator&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;label for="email"&gt;Email:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;input type="email" id="email" name="email" required&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;label for="subject"&gt;Subject:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;input type="text" id="subject" name="subject" required&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;label for="body"&gt;Body:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;textarea id="body" name="body" rows="4" required&gt;&lt;/textarea&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;button type="button" onclick="generateMailtoLink()"&gt;Generate Email Link&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;a id="mailtoLink" href="#" style="display: none;"&gt;&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
